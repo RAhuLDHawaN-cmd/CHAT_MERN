@@ -11,6 +11,8 @@ import axios from "axios";
 
 import { regRoute } from '../utils/apiRoutes';
 
+import SetAvatar from '../Components/SetAvatar';
+
 import styled from "styled-components";
 export default function Register() {
 
@@ -88,6 +90,10 @@ export default function Register() {
   return (
     <>
     <FormContainer>
+
+    <SetAvatar/>
+
+
     <form action="" onSubmit={(event) => handleSubmit(event)}>
       <div className="brand">
         <img src={logo} alt="logo" />
