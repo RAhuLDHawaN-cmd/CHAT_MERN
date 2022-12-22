@@ -91,7 +91,6 @@ export default function Register() {
     <>
     <FormContainer>
 
-    <SetAvatar/>
 
 
     <form action="" onSubmit={(event) => handleSubmit(event)}>
