@@ -61,7 +61,13 @@ export default function Login() {
           JSON.stringify(data.user)
         );
 
+        console.log("img datea is"+data.avatarImage);
+
+        if(!data.user.avatarImage)
         navigate("/setAvatar");
+        else
+        navigate("/");
+        
       }
     }
   };

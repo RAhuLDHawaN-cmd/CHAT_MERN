@@ -5,6 +5,7 @@ import { allUsersRoute, host } from "../utils/apiRoutes";
 import { useNavigate } from "react-router-dom";
 import Contacts from './Contacts';
 import Welcome from './Welcome';
+import ChatContainer from './Chatcontainer'
 export default function Chat() {
 
     const [contacts, setContacts] = useState([]);
@@ -56,7 +57,13 @@ useEffect( () => {
       <h1>CONTACTS</h1>
         <div className="container">
             <Contacts contacts={contacts} currentUser={currentUser} changeChat={handleChatChange}   />
-      <Welcome/>
+      
+            {currentChat === undefined ? (
+            <Welcome  currentUser={currentUser} />
+          ) : (
+            <ChatContainer currentChat={currentChat} currentUser={currentUser} />
+          )}
+    
         
         </div>
       </Container>
